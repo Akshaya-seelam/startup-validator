@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "Startup Idea Validator Application",
   "scripts": {
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
-    "dev:backend": "cd Backend && node server.js",
-    "dev:frontend": "cd frontend_original && npm run dev",
-    "install:all": "npm install && cd Backend && npm install && cd ../frontend_original && npm install",
-    "start": "npm run dev"
+    "build": "cd frontend_original && npm install && npm run build",
+    "start": "cd Backend && node server.js"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"
