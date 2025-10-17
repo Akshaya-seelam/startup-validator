@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Backend",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/Backend/server.js",
+            "cwd": "${workspaceFolder}/Backend",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "integratedTerminal",
+            "restart": true,
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Start Both Servers",
+            "configurations": [
+                "Debug Backend"
+            ],
+            "stopAll": true
+        }
+    ]
+}
